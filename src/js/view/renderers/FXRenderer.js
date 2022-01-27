@@ -88,6 +88,6 @@ FXRenderer.TILE_SIZE = { width: 64, height: 64 };
  * @type {Object}
  */
 FXRenderer.ANIMATION = {
-    CLOUD    : 0,
+    //CLOUD    : 0,
     EXPLOSION: 1
 };

@@ -15,7 +15,7 @@ export default {
         BOSS         : { src: `${spriteRoot}spritesheet_boss.png`,     img: null },
         FX           : { src: `${spriteRoot}spritesheet_fx.png`,       img: null },
         WATER        : { src: `${spriteRoot}spritesheet_water.png`,    img: null },
-        SKY          : { src: `${spriteRoot}clouds.png`,               img: null },
+        //SKY          : { src: `${spriteRoot}clouds.png`,               img: null },
         BULLET       : { src: `${spriteRoot}bullet.png`,               img: null },
         TILE         : { src: `${spriteRoot}tile.png`,                 img: null },
         ISLAND       : { src: `${spriteRoot}tilesheet_island.png`,     img: null }

@@ -4,7 +4,7 @@ import Pubsub          from "pubsub-js";
 import { canvas, sprite, collision } from "zcanvas";
 import Messages        from "@/definitions/Messages";
 import RendererFactory from "@/factory/RendererFactory";
-import CloudRenderer   from "@/view/renderers/CloudRenderer";
+//import CloudRenderer   from "@/view/renderers/CloudRenderer";
 //import TileRenderer    from "@/view/renderers/TileRenderer";
 //import WaterRenderer   from "@/view/renderers/WaterRenderer";
 import FXRenderer      from "@/view/renderers/FXRenderer";
@@ -26,7 +26,7 @@ const layers = new Array( 5 );
 
 let GROUND_LAYER            = 0;
 let BOTTOM_ACTOR_LAYER      = 1;
-let BOTTOM_DECORATION_LAYER = 2;
+//let BOTTOM_DECORATION_LAYER = 2;
 let TOP_ACTOR_LAYER         = 3;
 let TOP_DECORATION_LAYER    = 4;
 
@@ -110,7 +110,7 @@ function setupGame() {
 
     GROUND_LAYER            = layers[ 0 ];
     BOTTOM_ACTOR_LAYER      = layers[ 1 ];
-    BOTTOM_DECORATION_LAYER = layers[ 2 ];
+    //BOTTOM_DECORATION_LAYER = layers[ 2 ];
     TOP_ACTOR_LAYER         = layers[ 3 ];
     TOP_DECORATION_LAYER    = layers[ 4 ];
 
@@ -205,7 +205,7 @@ function addRendererToAppropriateLayer( layer, renderer ) {
             BOTTOM_ACTOR_LAYER.addChild( renderer );
             break;
         default:
-            BOTTOM_DECORATION_LAYER.addChild( renderer );
+           // BOTTOM_DECORATION_LAYER.addChild( renderer );
             break;
     }
 }
@@ -289,10 +289,10 @@ function showExplodeAnimation( actor ) {
 function showLayerSwitchAnimation( actor, targetLayer ) {
     // get FXRenderer from pool
     const renderer = FXRenderers.shift();
-    if ( renderer ) {
-        renderer.showAnimation( actor, FXRenderer.ANIMATION.CLOUD );
-        addRendererToAppropriateLayer( targetLayer, renderer );
-    }
+    //if ( renderer ) {
+    //    renderer.showAnimation( actor, FXRenderer.ANIMATION.CLOUD );
+    //    addRendererToAppropriateLayer( targetLayer, renderer );
+    //}
     if ( actor === player.actor ) {
         animateBackgroundColor( targetLayer );
         audioModel.setFrequency(( targetLayer === 1 ) ? 22050 : 1980 );
