@@ -1,0 +1,34 @@
+<header class="header">
+    <h1 class="title title--main">Game over</h1>
+</header>
+<section class="text">
+    {{#if highScore}}
+        <p>
+            New high score of {{score}}!
+        </p>
+        <input
+            type="text"
+            id="nameInput"
+            pattern=".{3,}"
+            required
+            placeholder="Enter your name..."
+            class="input"
+        />
+        <input
+            type="submit"
+            id="saveHighScore"
+            value="Save"
+            class="submit"
+        />
+    {{else}}
+        <p>
+
+        </p>
+    {{/if}}
+</section>
+{{!-- <footer class="wks-footer">
+    <section class="wks-menu">
+        <button class="wks-button wks-menu__play-button">Play</button>
+        <button class="wks-button wks-menu__home-button">Home</button>
+    </section>
+</footer> --}}

@@ -1,0 +1,22 @@
+<header class="header">
+    <h1 class="title title--main">High scores</h1>
+</header>
+<section class="text">
+    <table class="highscore-table">
+        <tbody>
+        {{#each scores}}
+            <tr>
+                <td class="highscore-table__index">{{add @index 1}}</td>
+                <td class="highscore-table__name">{{name}}</td>
+                <td class="highscore-table__score">{{score}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</section>
+<footer class="wks-footer">
+    <section class="wks-menu">
+        <button class="wks-button wks-menu__play-button">Play</button>
+        <button class="wks-button wks-menu__home-button">Home</button>
+    </section>
+</footer>

@@ -1,0 +1,154 @@
+.gme-header {
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+
+.gme-menu {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: $spacing-medium;
+    @include boxSize();
+}
+
+.gme-button {
+    width: 50%;
+    display: block;
+    padding: $spacing-medium;
+    margin: $spacing-small auto;
+    cursor: pointer;
+    background-color: $color-2;
+    border: none;
+    border-radius: 13px;
+    color: #FFF;
+    @include boxSize();
+
+    &:hover {
+        background-color: $color-5;
+        color: $color-2;
+    }
+}
+
+.gme-button-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: $spacing-medium + $spacing-small;
+    @include boxSize();
+
+    @include mobile() {
+        .gme-button {
+            width: 100%;
+        }
+    }
+}
+
+.gme-text {
+    @include boxSize();
+    padding: 0 $spacing-medium;
+    width: 50%;
+    overflow-y: auto;
+    margin: 0 auto;
+    border-radius: 13px;
+    background-color: $color-2;
+    color: $color-1;
+
+    @include large() {
+        max-width: 475px;
+        height: 75%;
+        padding: $spacing-small $spacing-large;
+    }
+
+    @include mobile() {
+        width: 100%;
+        height: 85%;
+    }
+
+    button {
+        width: 50%;
+        display: block;
+        padding: $spacing-large;
+        margin: $spacing-small auto;
+        cursor: pointer;
+    }
+
+    input {
+        &.error {
+          border: 1px solid red;
+        }
+    }
+}
+
+.gme-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $spacing-medium $spacing-large;
+    text-align: center;
+    color: #FFF;
+    @include boxSize();
+
+    .gme-menu button {
+        display: inline;
+        width: 33%;
+
+        @include mobile() {
+            width: 49%;
+        }
+    }
+}
+
+.gme-bar {
+    background-color: $color-2;
+    padding: $spacing-small $spacing-medium;
+}
+
+.gme-input {
+    @include boxSize();
+    padding: $spacing-medium;
+    background-color: #FFF;
+    border-radius: 14px;
+    border: none;
+    margin-bottom: $spacing-medium;
+}
+
+.gme-submit {
+    font-family: "Baloo 2", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    padding: $spacing-medium;
+    background-color: $color-1;
+    color: #FFF;
+    border-radius: 14px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.gme-input,
+.gme-submit {
+    width: 100%;
+    display: block;
+}
+
+.gme-highscore-table {
+    width: 100%;
+    font-weight: bold;
+    padding: $spacing-large;
+    @include boxSize();
+
+    @include mobile() {
+        padding: $spacing-medium 0;
+    }
+
+    &__index {
+        width: 10%;
+    }
+    &__name {
+        width: 65%;
+    }
+    &__score {
+        width: 25%;
+        text-align: right;
+    }
+}

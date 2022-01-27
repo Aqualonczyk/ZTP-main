@@ -1,0 +1,27 @@
+<header class="gme-header">
+    <h1 class="gme-title gme-title--main">About / Credits</h1>
+</header>
+<section class="gme-text">
+    <p>
+        This game was created by igorski.nl to show off the mobile web gaming capabilities
+        of the open source <a href="https://github.com/igorski/zcanvas" class="gme-link" target="_blank">zCanvas library</a>.
+        The game itself is completely <a href="https://github.com/igorski/weltkriegsimulator" class="gme-link" target="_blank">open source</a> as well.
+    </p>
+    <p>
+        The music is by the respective artists (shown on playback start). Graphics for the game sprites as
+        well as sound effects come from <i>opengameart.org</i> and features entries by:
+    </p>
+    <ul class="gme-list">
+        {{#each resources}}
+        <li>
+            <a href="{{href}}" class="gme-link" target="_blank">{{name}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+<footer class="gme-footer">
+    <section class="gme-menu">
+        <button class="gme-button gme-menu__play-button">Play</button>
+        <button class="gme-button gme-menu__home-button">Home</button>
+    </section>
+</footer>
